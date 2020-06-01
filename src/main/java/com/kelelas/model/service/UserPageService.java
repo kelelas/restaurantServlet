@@ -7,48 +7,55 @@ import com.kelelas.model.exception.DBException;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserPageService {
     UserService userService;
-    DishService dishService;
     HistoryService historyService;
     CartService cartService;
     BillService billService;
+    TransactionService transactionService;
     HttpServletRequest request;
     User user;
     int sum= ConstantsConfig.getIntProperty("number.defaultNumber");
 
+//    public UserPageService(UserService userService, DishService dishService, HistoryService historyService, CartService cartService, BillService billService, HttpServletRequest request) {
+//        this.userService = userService;
+//        this.dishService = dishService;
+//        this.historyService = historyService;
+//        this.cartService = cartService;
+//        this.billService = billService;
+//        this.request = request;
+//        user = (User) request.getSession().getAttribute("user");
+//    }
+
     public UserPageService(HttpServletRequest request) {
         this.userService = new UserService();
-        this.dishService = new DishService();
         this.historyService = new HistoryService();
         this.cartService = new CartService();
         this.billService= new BillService();
+        this.transactionService = new TransactionService();
         this.request = request;
         user = (User) request.getSession().getAttribute("user");
     }
 
     public void payForOrderById(String id) {
         try {
-            billService.setAutoCommitFalse();
-            historyService.setAutoCommitFalse();
+            transactionService.setAutoCommitFalse();
+
             Bill bill = billService.getBillById(Integer.parseInt(id));
-            if (bill.getStatus() == ConstantsConfig.getIntProperty("status.waitingForPay")) {
                 pay(bill.getPrice());
                 bill.setStatus(ConstantsConfig.getIntProperty("status.finished"));
                 billService.update(bill);
                 historyService.save(convertBillToHistory(bill));
-            }
-            billService.commit();
-            historyService.commit();
+
+            transactionService.commit();
+
         } catch (Exception e) {
-            billService.rollback();
-            historyService.rollback();
+            transactionService.rollback();
             throw new DBException(e);
         }
-        // historyItem = storiesService.getStoryById(Long.parseLong(id)).isPresent() ? storiesService.getStoryById(Long.parseLong(id)).get() : log.info("{Почтовый адрес уже существует}");;
-
     }
 
     public void refillUserBalance(){
@@ -62,7 +69,6 @@ public class UserPageService {
 
     public void addDishToOrder( Integer id) {
         cartService.addToCart(new Cart(user.getId(), id));
-        sum();
     }
 
     public void deleteDishFromOrder(Integer id){
@@ -80,10 +86,7 @@ public class UserPageService {
 
     public int sum() {
         sum = ConstantsConfig.getIntProperty("number.defaultNumber");
-        for (DishDTO dish : localDishes()){
-            sum += dish.getPrice();
-        }
-        request.setAttribute("sum", sum);
+        localDishes().forEach((d)-> sum+=d.getPrice());
         return sum;
     }
 
@@ -105,7 +108,7 @@ public class UserPageService {
                 .date(LocalDateTime.now())
                 .price(sum())
                 .userId(user.getId())
-                .status(1)
+                .status(ConstantsConfig.getIntProperty("status.waitingForConfirm"))
                 .dishes(dishes())
                 .build();
         historyService.save(historyItem);
@@ -114,11 +117,10 @@ public class UserPageService {
     public History convertBillToHistory(Bill bill){
         return new History.Builder()
                 .status(bill.getStatus())
-                .dishes(bill.getDishes())
+                .dishes(new ArrayList<>(bill.getDishes()))
                 .date(bill.getDate())
                 .price(bill.getPrice())
                 .userId(bill.getUserId())
-                .id(bill.getId())
                 .build();
     }
 }

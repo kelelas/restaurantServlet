@@ -10,7 +10,7 @@ public class Dish {
     private String nameEng;
     private String nameUkr;
     private int price;
-    private List<Ingredient> ingredients = new ArrayList<>();;
+    private List<Ingredient> ingredients = new ArrayList<>();
 
 
     private Dish() {

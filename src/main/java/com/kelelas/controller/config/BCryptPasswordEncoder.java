@@ -1,6 +1,7 @@
 package com.kelelas.controller.config;
 
 import org.mindrot.jbcrypt.BCrypt;
+
 import java.security.SecureRandom;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

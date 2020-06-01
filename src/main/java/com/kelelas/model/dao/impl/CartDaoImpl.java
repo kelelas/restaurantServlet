@@ -7,8 +7,14 @@ import com.kelelas.model.entity.Cart;
 import com.kelelas.model.entity.Dish;
 import com.kelelas.model.exception.DBException;
 
-import java.sql.*;
-import java.util.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static com.kelelas.model.dao.impl.DishDaoImpl.*;
@@ -136,33 +142,6 @@ public class CartDaoImpl implements CartDao {
     public void close() {
         try {
             connection.close();
-        } catch (SQLException e) {
-            throw new DBException(e);
-        }
-    }
-
-    @Override
-    public void setAutoCommitFalse(){
-        try {
-            connection.setAutoCommit(false);
-        } catch (SQLException e) {
-            throw new DBException(e);
-        }
-    }
-
-    @Override
-    public void commit() {
-        try {
-            connection.commit();
-        } catch (SQLException e) {
-            throw new DBException(e);
-        }
-    }
-
-    @Override
-    public void rollback() {
-        try {
-            connection.rollback();
         } catch (SQLException e) {
             throw new DBException(e);
         }

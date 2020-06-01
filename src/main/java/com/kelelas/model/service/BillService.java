@@ -41,19 +41,8 @@ public class BillService {
         return dao.getLocaleBillsByStatusAndUserId(request.getSession().getAttribute("lang").toString(), userId,  status);
     }
 
-    public Bill getBillById(int id) throws Exception {
+    public Bill getBillById(int id) {
         return dao.findById(id).orElseThrow(DBException::new);
     }
 
-    public void setAutoCommitFalse()  {
-        dao.setAutoCommitFalse();
-    }
-
-    public void commit()  {
-        dao.commit();
-    }
-
-    public void rollback()  {
-        dao.rollback();
-    }
 }

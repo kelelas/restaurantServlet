@@ -38,7 +38,6 @@
     <div class="container">
         <ul>
             <li><a href="/web/admin/orders_list"><fmt:message key="page.listOfOrders"/> </a></li>
-            <!--            <li><a href="/admin/bill_confirm">Отправить счет</a></li>-->
             <li><a href="/web/admin/statistics"><fmt:message key="page.statistics"/></a></li>
             <li><a href="/web/admin/update_ingredients"><fmt:message key="page.updateIngredients"/></a></li>
         </ul>
@@ -83,7 +82,10 @@
                     <div class="status">${item.status}</div>
                 </div>
                 <div class="col-2">
-                    <a type="button" class="btn btn-danger" href="?id=${item.id}"><fmt:message key="button.confirm"/></a>
+                    <form action="confirmOrder" method="post">
+                        <input type="hidden" name="orderId" id="orderId" value="${item.id}"/>
+                        <input type="submit" class="btn btn-danger" value="<fmt:message key="button.confirm"/>">
+                    </form>
                 </div>
             </div>
 </c:forEach>
@@ -91,15 +93,27 @@
 </div>
 <footer>
     <div class="container">
-        <div class="row">
-            <div class="col-4" >
-                <fmt:message key="footer.name"/>
+        <div class="row footer_info">
+            <div class="col-4 footer-col logo">
+                <fmt:message key="header.restaurant"/>
             </div>
-            <div class="col-4 date">
-                16.04.2020
+            <div class="col-4 footer-col contacts">
+                <div class="title"><fmt:message key="footer.contacts"/></div>
+                <a href="tel:+380935947785" class="phone">+38 093 594 77 85</a>
+                <a href="mailto:kelels2015@gmail.com" class="email">kelels2015@gmail.com</a>
+                <a href="https://github.com/kelelas">github.com/kelelas</a>
             </div>
-            <div class="col-4 version" >
-                <fmt:message key="footer.version"/>
+            <div class="col-4 footer-col version">
+                <div class="title">
+                    <fmt:message key="footer.version"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row copyright">
+            <div class="col-12">
+                Made by Osypchuk Vladyslav
             </div>
         </div>
     </div>

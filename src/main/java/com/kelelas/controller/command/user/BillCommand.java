@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 
 public class BillCommand implements Command {
     BillService billService;
-    UserPageService userPageService;
-    private static final Logger logger = Logger.getLogger(BillCommand.class);
 
     public BillCommand() {
         this.billService = new BillService();
@@ -20,18 +18,8 @@ public class BillCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest request) {
-        userPageService = new UserPageService(request);
         request.setAttribute("items", billService.getLocaleBillsByStatusAndUserId(request,
                 ConstantsConfig.getIntProperty("status.waitingForPay"), (Integer) request.getSession().getAttribute("userId")));
-        String id = request.getParameter("id");
-        if (id!=null){
-            try {
-                userPageService.payForOrderById(id);
-            } catch (Exception e) {
-                logger.error(e.getStackTrace());
-            }
-            return PageConfig.getProperty("path.page.redirect.user.bill");
-        }
         return PageConfig.getProperty("path.page.user.bill");
     }
 }

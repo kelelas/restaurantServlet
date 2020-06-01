@@ -31,15 +31,4 @@ public class IngredientService {
         dao.update(item);
     }
 
-    public void setAutoCommitFalse() {
-        dao.setAutoCommitFalse();
-    }
-
-    public void commit(){
-        dao.commit();
-    }
-
-    public void rollback(){
-        dao.rollback();
-    }
 }

@@ -1,275 +1,393 @@
-2020-05-21 22:53:22 INFO  Servlet:69 -
-2020-05-21 22:53:28 INFO  Servlet:69 - login
-2020-05-21 22:53:47 INFO  Servlet:69 - registration
-2020-05-21 23:53:18 INFO  Servlet:69 - 
-2020-05-21 23:53:25 INFO  Servlet:69 - login
-2020-05-21 23:53:33 INFO  Servlet:69 - log
-2020-05-21 23:53:33 INFO  Servlet:69 - admin/update_ingredients
-2020-05-21 23:53:37 INFO  Servlet:69 - admin/statistics
-2020-05-22 00:36:22 INFO  Servlet:69 - 
-2020-05-22 00:36:24 INFO  Servlet:69 - login
-2020-05-22 00:36:30 INFO  Servlet:69 - log
-2020-05-22 00:36:30 INFO  Servlet:69 - admin/update_ingredients
-2020-05-22 00:36:33 INFO  Servlet:69 - admin/statistics
-2020-05-22 00:38:53 INFO  Servlet:69 - 
-2020-05-22 00:38:55 INFO  Servlet:69 - login
-2020-05-22 00:39:01 INFO  Servlet:69 - log
-2020-05-22 00:39:02 INFO  Servlet:69 - admin/update_ingredients
-2020-05-22 00:39:04 INFO  Servlet:69 - admin/statistics
-2020-05-22 00:45:54 INFO  Servlet:69 -
-2020-05-22 00:45:58 INFO  Servlet:69 - login
-2020-05-22 00:46:04 INFO  Servlet:69 - log
-2020-05-22 00:46:04 INFO  Servlet:69 - admin/update_ingredients
-
-2020-05-22 10:48:11 INFO  Servlet:69 - 
-2020-05-22 10:48:13 INFO  Servlet:69 - 
-2020-05-22 10:48:17 INFO  Servlet:69 - login
-2020-05-22 10:48:21 INFO  Servlet:69 - log
-2020-05-22 10:48:22 INFO  Servlet:69 - user/menu
-2020-05-22 10:48:34 INFO  Servlet:69 - user/bill
-2020-05-22 10:48:42 INFO  Servlet:69 - user/cart
-2020-05-22 10:48:47 INFO  Servlet:69 - user/cart
-2020-05-22 10:48:49 INFO  Servlet:69 - user/cart
-2020-05-22 10:48:49 INFO  Servlet:69 - user/cart
-2020-05-22 10:48:49 INFO  Servlet:69 - user/cart
-2020-05-22 10:49:00 INFO  Servlet:69 - user/menu
-2020-05-22 10:49:02 INFO  Servlet:69 - user/cart
-2020-05-22 10:49:05 INFO  Servlet:69 - user/bill
-2020-05-22 10:49:06 INFO  Servlet:69 - user/cart
-2020-05-22 10:49:12 INFO  Servlet:69 - user/menu
-2020-05-22 10:49:14 INFO  Servlet:69 - user/menu
-2020-05-22 10:49:18 INFO  Servlet:69 - user/menu
-2020-05-22 10:49:20 INFO  Servlet:69 - user/menu
-2020-05-22 10:49:22 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:06 INFO  Servlet:69 - 
-2020-05-22 10:50:08 INFO  Servlet:69 - 
-2020-05-22 10:50:15 INFO  Servlet:69 - login
-2020-05-22 10:50:16 INFO  Servlet:69 - log
-2020-05-22 10:50:16 INFO  Servlet:69 - user/menu
-2020-05-22 10:50:18 INFO  Servlet:69 - user/menu
-2020-05-22 10:50:21 INFO  Servlet:69 - user/bill
-2020-05-22 10:50:23 INFO  Servlet:69 - user/history
-2020-05-22 10:50:29 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:33 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:34 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:35 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:36 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:36 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:37 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:37 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:37 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:38 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:38 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:40 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:41 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:41 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:42 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:43 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:44 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:44 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:45 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:45 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:46 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:46 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:47 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:47 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:48 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:49 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:49 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:49 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:51 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:52 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:54 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:54 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:55 INFO  Servlet:69 - user/cart
-2020-05-22 10:50:55 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:01 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:02 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:02 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:02 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:02 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:03 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:03 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:03 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:04 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:04 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:04 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:04 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:05 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:06 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:08 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:09 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:09 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:11 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:12 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:14 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:21 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:21 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:21 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:21 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:22 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:23 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:23 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:24 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:24 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:25 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:25 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:25 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:27 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:28 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:29 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:29 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:30 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:31 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:32 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:33 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:55 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:55 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:56 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:56 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:56 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:56 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:57 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:57 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:57 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:57 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:57 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:58 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:58 INFO  Servlet:69 - user/cart
-2020-05-22 10:51:58 INFO  Servlet:69 - user/cart
-2020-05-22 10:52:24 INFO  Servlet:69 - user/cart
-2020-05-22 10:52:25 INFO  Servlet:69 - user/history
-2020-05-22 10:52:27 INFO  Servlet:69 - user/cart
-2020-05-22 10:54:01 INFO  Servlet:69 - 
-2020-05-22 10:54:03 INFO  Servlet:69 - 
-2020-05-22 10:54:05 INFO  Servlet:69 - login
-2020-05-22 10:54:07 INFO  Servlet:69 - log
-2020-05-22 10:54:07 INFO  Servlet:69 - user/menu
-2020-05-22 10:54:09 INFO  Servlet:69 - user/cart
-2020-05-22 10:54:12 INFO  Servlet:69 - user/bill
-2020-05-22 10:54:14 INFO  Servlet:69 - user/history
-2020-05-22 10:55:36 INFO  Servlet:69 - user/menu
-2020-05-22 10:55:37 INFO  Servlet:69 - user/menu
-2020-05-22 10:55:39 INFO  Servlet:69 - user/menu
-2020-05-22 10:55:40 INFO  Servlet:69 - user/menu
-2020-05-22 10:55:43 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:45 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:45 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:48 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:48 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:48 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:49 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:49 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:49 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:49 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:50 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:50 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:50 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:50 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:51 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:51 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:51 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:51 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:52 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:52 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:52 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:52 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:53 INFO  Servlet:69 - user/cart
-2020-05-22 10:55:55 INFO  Servlet:69 - user/cart
-2020-05-22 11:00:23 INFO  Servlet:69 - user/refill
-2020-05-22 11:00:25 INFO  Servlet:69 - user/history
-2020-05-22 11:00:41 INFO  Servlet:69 - user/bill
-2020-05-22 11:00:43 INFO  Servlet:69 - user/menu
-2020-05-22 11:00:46 INFO  Servlet:69 - logout
-2020-05-22 11:00:46 INFO  Servlet:69 - login
-2020-05-22 11:00:51 INFO  Servlet:69 - log
-2020-05-22 11:00:51 INFO  Servlet:69 - admin/update_ingredients
-2020-05-22 11:00:53 INFO  Servlet:69 - admin/orders_list
-2020-05-22 11:01:00 INFO  Servlet:69 - admin/orders_list
-2020-05-22 11:01:01 INFO  Servlet:69 - admin/orders_list
-2020-05-22 11:01:06 INFO  Servlet:69 - admin/statistics
-2020-05-22 11:01:08 INFO  Servlet:69 - admin/orders_list
-2020-05-22 11:01:26 INFO  Servlet:69 - admin/statistics
-2020-05-22 11:01:29 INFO  Servlet:69 - admin/statistics
-2020-05-22 11:01:30 INFO  Servlet:69 - admin/statistics
-2020-05-22 11:01:33 INFO  Servlet:69 - admin/statistics
-2020-05-22 11:01:43 INFO  Servlet:69 - admin/statistics
-2020-05-22 11:01:45 INFO  Servlet:69 - admin/orders_list
-2020-05-22 11:01:48 INFO  Servlet:69 - logout
-2020-05-22 11:01:48 INFO  Servlet:69 - login
-2020-05-22 11:01:51 INFO  Servlet:69 - log
-2020-05-22 11:01:51 INFO  Servlet:69 - user/menu
-2020-05-22 11:01:52 INFO  Servlet:69 - user/bill
-2020-05-22 11:02:00 INFO  Servlet:69 - user/bill
-2020-05-22 11:02:01 INFO  Servlet:69 - user/bill
-2020-05-22 11:02:03 INFO  Servlet:69 - user/history
-2020-05-22 11:10:11 INFO  Servlet:69 - 
-2020-05-22 11:10:12 INFO  Servlet:69 - 
-2020-05-22 11:10:15 INFO  Servlet:69 - login
-2020-05-22 11:10:19 INFO  Servlet:69 - log
-2020-05-22 11:10:19 INFO  Servlet:69 - user/menu
-2020-05-22 11:10:21 INFO  Servlet:69 - user/menu
-2020-05-22 11:10:22 INFO  Servlet:69 - user/menu
-2020-05-22 11:10:24 INFO  Servlet:69 - user/cart
-2020-05-22 11:10:26 INFO  Servlet:69 - user/cart
-2020-05-22 11:10:27 INFO  Servlet:69 - user/cart
-2020-05-22 11:10:29 INFO  Servlet:69 - user/history
-2020-05-22 11:10:42 INFO  Servlet:69 - user/bill
-2020-05-22 11:10:44 INFO  Servlet:69 - user/history
-2020-05-22 11:10:56 INFO  Servlet:69 - logout
-2020-05-22 11:10:56 INFO  Servlet:69 - login
-2020-05-22 11:11:01 INFO  Servlet:69 - log
-2020-05-22 11:11:01 INFO  Servlet:69 - admin/update_ingredients
-2020-05-22 11:11:07 INFO  Servlet:69 - admin/statistics
-2020-05-22 11:11:10 INFO  Servlet:69 - admin/statistics
-2020-05-22 11:11:12 INFO  Servlet:69 - admin/statistics
-2020-05-22 11:11:15 INFO  Servlet:69 - admin/statistics
-2020-05-22 11:11:19 INFO  Servlet:69 - admin/orders_list
-2020-05-22 11:11:21 INFO  Servlet:69 - admin/orders_list
-2020-05-22 11:11:22 INFO  Servlet:69 - admin/orders_list
-2020-05-22 11:11:23 INFO  Servlet:69 - admin/statistics
-2020-05-22 11:11:45 INFO  Servlet:69 - logout
-2020-05-22 11:11:45 INFO  Servlet:69 - login
-2020-05-22 11:11:46 INFO  Servlet:69 - log
-2020-05-22 11:11:46 INFO  Servlet:69 - user/menu
-2020-05-22 11:11:48 INFO  Servlet:69 - user/history
-2020-05-22 11:11:51 INFO  Servlet:69 - user/menu
-2020-05-22 11:11:52 INFO  Servlet:69 - user/bill
-2020-05-22 11:11:54 INFO  Servlet:69 - user/bill
-2020-05-22 11:11:54 INFO  Servlet:69 - user/bill
-2020-05-22 11:11:55 INFO  Servlet:69 - user/history
-2020-05-22 11:35:40 INFO  Servlet:69 - 
-2020-05-22 11:35:42 INFO  Servlet:69 - 
-2020-05-22 11:35:44 INFO  Servlet:69 - login
-2020-05-22 11:35:46 INFO  Servlet:69 - log
-2020-05-22 11:35:46 INFO  Servlet:69 - user/menu
-2020-05-22 11:35:48 INFO  Servlet:69 - user/history
-2020-05-22 11:35:50 INFO  Servlet:69 - user/bill
-2020-05-22 11:35:51 INFO  Servlet:69 - user/menu
-2020-05-22 11:35:52 INFO  Servlet:69 - user/cart
-2020-05-22 11:35:53 INFO  Servlet:69 - user/menu
-2020-05-22 11:35:55 INFO  Servlet:69 - user/menu
-2020-05-22 11:35:56 INFO  Servlet:69 - user/menu
-2020-05-22 11:35:57 INFO  Servlet:69 - user/cart
-2020-05-22 11:36:00 INFO  Servlet:69 - user/cart
-2020-05-22 11:36:00 INFO  Servlet:69 - user/cart
-2020-05-22 11:36:02 INFO  Servlet:69 - user/history
-2020-05-22 11:36:04 INFO  Servlet:69 - user/bill
-2020-05-22 11:36:06 INFO  Servlet:69 - logout
-2020-05-22 11:36:06 INFO  Servlet:69 - login
-2020-05-22 11:36:10 INFO  Servlet:69 - log
-2020-05-22 11:36:10 INFO  Servlet:69 - admin/update_ingredients
-2020-05-22 11:36:12 INFO  Servlet:69 - admin/statistics
-2020-05-22 11:36:17 INFO  Servlet:69 - admin/orders_list
-2020-05-22 11:36:23 INFO  Servlet:69 - admin/orders_list
-2020-05-22 11:36:24 INFO  Servlet:69 - admin/orders_list
-2020-05-22 11:36:25 INFO  Servlet:69 - admin/statistics
-2020-05-22 11:36:30 INFO  Servlet:69 - logout
-2020-05-22 11:36:30 INFO  Servlet:69 - login
-2020-05-22 11:36:32 INFO  Servlet:69 - log
-2020-05-22 11:36:32 INFO  Servlet:69 - user/menu
-2020-05-22 11:36:33 INFO  Servlet:69 - user/history
-2020-05-22 11:36:35 INFO  Servlet:69 - user/bill
-2020-05-22 11:36:38 INFO  Servlet:69 - user/bill
-2020-05-22 11:36:39 INFO  Servlet:69 - user/bill
-2020-05-22 11:36:40 INFO  Servlet:69 - user/history
+2020-05-22 17:08:06 INFO  Servlet:66 - 
+2020-05-22 17:08:07 INFO  Servlet:66 - 
+2020-05-22 17:08:10 INFO  Servlet:66 - login
+2020-05-22 17:08:12 INFO  Servlet:66 - log
+2020-05-22 17:08:12 INFO  Servlet:66 - user/menu
+2020-05-22 17:08:15 INFO  Servlet:66 - user/history
+2020-05-22 17:12:51 INFO  Servlet:66 - 
+2020-05-22 17:12:52 INFO  Servlet:66 - 
+2020-05-22 17:57:10 INFO  Servlet:66 - 
+2020-05-22 17:57:11 INFO  Servlet:66 - 
+2020-05-22 17:57:15 INFO  Servlet:66 - login
+2020-05-22 17:57:17 INFO  Servlet:66 - log
+2020-05-22 17:57:18 INFO  Servlet:66 - user/menu
+2020-05-22 17:57:20 INFO  Servlet:66 - user/menu
+2020-05-22 17:57:22 INFO  Servlet:66 - user/menu
+2020-05-22 17:57:23 INFO  Servlet:66 - user/menu
+2020-05-22 17:57:25 INFO  Servlet:66 - user/cart
+2020-05-22 17:57:28 INFO  Servlet:66 - user/cart
+2020-05-22 17:57:29 INFO  Servlet:66 - user/cart
+2020-05-22 17:57:30 INFO  Servlet:66 - user/bill
+2020-05-22 17:57:32 INFO  Servlet:66 - user/bill
+2020-05-22 17:57:33 INFO  Servlet:66 - user/bill
+2020-05-22 17:57:35 INFO  Servlet:66 - user/bill
+2020-05-22 17:57:35 INFO  Servlet:66 - user/bill
+2020-05-22 17:57:38 INFO  Servlet:66 - user/history
+2020-05-22 17:57:52 INFO  Servlet:66 - user/history
+2020-05-22 17:57:53 INFO  Servlet:66 - user/history
+2020-05-22 17:57:54 INFO  Servlet:66 - user/history
+2020-05-22 17:57:55 INFO  Servlet:66 - user/history
+2020-05-22 17:57:56 INFO  Servlet:66 - user/history
+2020-05-22 17:57:56 INFO  Servlet:66 - user/history
+2020-05-22 17:57:57 INFO  Servlet:66 - user/history
+2020-05-22 17:58:01 INFO  Servlet:66 - logout
+2020-05-22 17:58:01 INFO  Servlet:66 - login
+2020-05-22 17:58:04 INFO  Servlet:66 - 
+2020-05-22 18:09:49 INFO  Servlet:66 - 
+2020-05-22 18:09:50 INFO  Servlet:66 - 
+2020-05-22 18:17:36 INFO  Servlet:66 - 
+2020-05-22 18:17:37 INFO  Servlet:66 - 
+2020-05-22 18:25:46 INFO  Servlet:66 - 
+2020-05-22 18:26:04 INFO  Servlet:66 - 
+2020-05-22 18:26:57 INFO  Servlet:66 - 
+2020-05-22 18:27:00 INFO  Servlet:66 - 
+2020-05-22 18:27:02 INFO  Servlet:66 - 
+2020-05-22 18:27:03 INFO  Servlet:66 - registration
+2020-05-22 18:27:14 INFO  Servlet:66 - login
+2020-05-22 18:27:17 INFO  Servlet:66 - registration
+2020-05-22 18:27:21 INFO  Servlet:66 - reg
+2020-05-22 18:27:24 INFO  Servlet:66 - registration
+2020-05-22 18:28:23 INFO  Servlet:66 - reg
+2020-05-22 18:28:48 INFO  Servlet:66 - registration
+2020-05-22 18:29:03 INFO  Servlet:66 - login
+2020-05-22 18:29:51 INFO  Servlet:66 - log
+2020-05-22 18:29:52 INFO  Servlet:66 - user/menu
+2020-05-22 18:30:01 INFO  Servlet:66 - user/menu
+2020-05-22 18:30:06 INFO  Servlet:66 - user/menu
+2020-05-22 18:30:07 INFO  Servlet:66 - user/cart
+2020-05-22 18:30:14 INFO  Servlet:66 - user/menu
+2020-05-22 18:30:16 INFO  Servlet:66 - user/menu
+2020-05-22 18:30:17 INFO  Servlet:66 - user/menu
+2020-05-22 18:30:19 INFO  Servlet:66 - user/cart
+2020-05-22 18:30:23 INFO  Servlet:66 - user/cart
+2020-05-22 18:30:24 INFO  Servlet:66 - user/cart
+2020-05-22 18:31:16 INFO  Servlet:66 - user/refill
+2020-05-22 18:31:28 INFO  Servlet:66 - user/refill
+2020-05-22 18:31:34 INFO  Servlet:66 - user/history
+2020-05-22 18:32:24 INFO  Servlet:66 - user/history
+2020-05-22 18:32:26 INFO  Servlet:66 - user/history
+2020-05-22 18:32:29 INFO  Servlet:66 - user/history
+2020-05-22 18:34:12 INFO  Servlet:66 - user/bill
+2020-05-22 18:34:20 INFO  Servlet:66 - user/cart
+2020-05-22 18:34:24 INFO  Servlet:66 - user/cart
+2020-05-22 18:34:24 INFO  Servlet:66 - user/cart
+2020-05-22 18:34:29 INFO  Servlet:66 - login
+2020-05-22 18:34:35 INFO  Servlet:66 - log
+2020-05-22 18:34:35 INFO  Servlet:66 - admin/update_ingredients
+2020-05-22 18:35:49 INFO  Servlet:66 - logout
+2020-05-22 18:35:49 INFO  Servlet:66 - login
+2020-05-22 18:35:55 INFO  Servlet:66 - log
+2020-05-22 18:35:55 INFO  Servlet:66 - admin/update_ingredients
+2020-05-22 18:36:01 INFO  Servlet:66 - admin/orders_list
+2020-05-22 18:36:06 INFO  Servlet:66 - admin/orders_list
+2020-05-22 18:36:07 INFO  Servlet:66 - admin/orders_list
+2020-05-22 18:36:22 INFO  Servlet:66 - user/bill
+2020-05-22 18:36:30 INFO  Servlet:66 - user/history
+2020-05-22 18:36:37 INFO  Servlet:66 - user/bill
+2020-05-22 18:36:41 INFO  Servlet:66 - user/bill
+2020-05-22 18:36:43 INFO  Servlet:66 - user/bill
+2020-05-22 18:36:45 INFO  Servlet:66 - user/history
+2020-05-26 16:16:14 INFO  Servlet:66 - 
+2020-05-26 16:16:27 INFO  Servlet:66 - 
+2020-05-26 16:18:07 INFO  Servlet:66 - login
+2020-05-26 16:18:27 INFO  Servlet:66 - log
+2020-05-26 16:18:34 INFO  Servlet:66 - user/menu
+2020-05-26 16:18:44 INFO  Servlet:66 - user/history
+2020-05-26 16:21:10 INFO  Servlet:66 - user/bill
+2020-05-26 16:21:12 INFO  Servlet:66 - user/menu
+2020-05-26 16:21:19 INFO  Servlet:66 - user/cart
+2020-05-26 16:21:37 INFO  Servlet:66 - user/refill
+2020-05-31 15:45:41 INFO  Servlet:69 - 
+2020-05-31 15:45:45 INFO  Servlet:69 - 
+2020-05-31 15:45:49 INFO  Servlet:69 - login
+2020-05-31 15:45:51 INFO  Servlet:69 - log
+2020-05-31 15:45:52 INFO  Servlet:69 - user/menu
+2020-05-31 15:49:38 INFO  Servlet:69 - 
+2020-05-31 15:49:40 INFO  Servlet:69 - 
+2020-05-31 15:49:45 INFO  Servlet:69 - login
+2020-05-31 15:49:47 INFO  Servlet:69 - log
+2020-05-31 15:49:47 INFO  Servlet:69 - user/menu
+2020-05-31 15:49:52 INFO  Servlet:69 - user/cart
+2020-05-31 15:49:54 INFO  Servlet:69 - user/cart
+2020-05-31 15:49:55 INFO  Servlet:69 - user/cart
+2020-05-31 15:49:57 INFO  Servlet:69 - user/menu
+2020-05-31 15:53:05 INFO  Servlet:69 - user/menu
+2020-05-31 15:53:07 INFO  Servlet:69 - user/cart
+2020-05-31 15:53:09 INFO  Servlet:69 - user/menu
+2020-05-31 15:53:14 INFO  Servlet:69 - user/menu
+2020-05-31 15:56:03 INFO  Servlet:69 - 
+2020-05-31 15:56:05 INFO  Servlet:69 - 
+2020-05-31 15:56:08 INFO  Servlet:69 - login
+2020-05-31 15:56:09 INFO  Servlet:69 - log
+2020-05-31 15:56:09 INFO  Servlet:69 - user/menu
+2020-05-31 16:00:01 INFO  Servlet:69 - 
+2020-05-31 16:00:02 INFO  Servlet:69 - 
+2020-05-31 16:00:05 INFO  Servlet:69 - login
+2020-05-31 16:00:07 INFO  Servlet:69 - log
+2020-05-31 16:00:08 INFO  Servlet:69 - user/menu
+2020-05-31 16:40:11 INFO  Servlet:69 - 
+2020-05-31 16:40:14 INFO  Servlet:69 - 
+2020-05-31 16:40:21 INFO  Servlet:69 - login
+2020-05-31 16:40:23 INFO  Servlet:69 - log
+2020-05-31 16:40:24 INFO  Servlet:69 - user/menu
+2020-05-31 16:40:26 INFO  Servlet:69 - user/user/addToOrder
+2020-05-31 16:40:58 INFO  Servlet:69 - 
+2020-05-31 16:41:00 INFO  Servlet:69 - 
+2020-05-31 16:41:12 INFO  Servlet:69 - login
+2020-05-31 16:41:13 INFO  Servlet:69 - log
+2020-05-31 16:41:14 INFO  Servlet:69 - user/menu
+2020-05-31 16:41:16 INFO  Servlet:69 - user/addToOrder
+2020-05-31 16:41:17 INFO  Servlet:69 - user/menu
+2020-05-31 16:41:20 INFO  Servlet:69 - user/cart
+2020-05-31 16:53:32 INFO  Servlet:69 - user/menu
+2020-05-31 16:53:34 INFO  Servlet:69 - user/addToOrder
+2020-05-31 16:53:34 INFO  Servlet:69 - user/menu
+2020-05-31 16:53:37 INFO  Servlet:69 - user/addToOrder
+2020-05-31 16:53:37 INFO  Servlet:69 - user/menu
+2020-05-31 16:53:40 INFO  Servlet:69 - user/cart
+2020-05-31 17:36:02 INFO  Servlet:81 - 
+2020-05-31 17:36:06 INFO  Servlet:81 - 
+2020-05-31 17:36:17 INFO  Servlet:81 - login
+2020-05-31 17:36:19 INFO  Servlet:81 - log
+2020-05-31 17:36:19 INFO  Servlet:81 - user/menu
+2020-05-31 17:36:22 INFO  Servlet:81 - user/addToOrder
+2020-05-31 17:36:23 INFO  Servlet:81 - user/menu
+2020-05-31 17:36:31 INFO  Servlet:81 - user/menu
+2020-05-31 17:36:35 INFO  Servlet:81 - user/menu
+2020-05-31 17:38:01 INFO  Servlet:81 - 
+2020-05-31 17:38:02 INFO  Servlet:81 - 
+2020-05-31 17:42:50 INFO  Servlet:81 - login
+2020-05-31 17:42:53 INFO  Servlet:81 - log
+2020-05-31 17:42:53 INFO  Servlet:81 - user/menu
+2020-05-31 17:42:55 INFO  Servlet:81 - user/menu
+2020-05-31 17:44:03 INFO  Servlet:81 - 
+2020-05-31 17:44:05 INFO  Servlet:81 - 
+2020-05-31 17:44:08 INFO  Servlet:81 - 
+2020-05-31 17:47:05 INFO  Servlet:81 - 
+2020-05-31 17:47:06 INFO  Servlet:81 - 
+2020-05-31 17:47:11 INFO  Servlet:81 - 
+2020-05-31 17:50:06 INFO  Servlet:81 - 
+2020-05-31 17:50:07 INFO  Servlet:81 - 
+2020-05-31 17:50:10 INFO  Servlet:81 - 
+2020-05-31 17:50:11 INFO  Servlet:81 - 
+2020-05-31 17:50:12 INFO  Servlet:81 - 
+2020-05-31 17:50:14 INFO  Servlet:81 - login
+2020-05-31 17:50:16 INFO  Servlet:81 - log
+2020-05-31 17:50:16 INFO  Servlet:81 - user/menu
+2020-05-31 17:50:19 INFO  Servlet:81 - user/menu
+2020-05-31 17:50:20 INFO  Servlet:81 - user/menu
+2020-05-31 17:50:22 INFO  Servlet:81 - user/menu
+2020-05-31 17:50:26 INFO  Servlet:81 - user/addToOrder
+2020-05-31 17:50:26 INFO  Servlet:81 - user/menu
+2020-05-31 17:50:28 INFO  Servlet:81 - user/bill
+2020-05-31 17:50:32 INFO  Servlet:81 - user/payForOrder
+2020-05-31 17:50:37 INFO  Servlet:81 - user/bill
+2020-05-31 17:50:40 INFO  Servlet:81 - user/cart
+2020-05-31 17:50:42 INFO  Servlet:81 - user/history
+2020-05-31 17:51:04 INFO  Servlet:81 - user/cart
+2020-05-31 17:51:35 INFO  Servlet:81 - user/cart
+2020-05-31 17:51:50 INFO  Servlet:81 - user/menu
+2020-05-31 17:52:40 INFO  Servlet:81 - 
+2020-05-31 17:52:42 INFO  Servlet:81 - 
+2020-05-31 17:52:45 INFO  Servlet:81 - login
+2020-05-31 17:52:46 INFO  Servlet:81 - log
+2020-05-31 17:52:47 INFO  Servlet:81 - user/menu
+2020-05-31 17:52:49 INFO  Servlet:81 - user/cart
+2020-05-31 17:53:33 INFO  Servlet:81 - 
+2020-05-31 17:53:34 INFO  Servlet:81 - 
+2020-05-31 17:53:39 INFO  Servlet:81 - login
+2020-05-31 17:53:41 INFO  Servlet:81 - log
+2020-05-31 17:53:41 INFO  Servlet:81 - user/menu
+2020-05-31 17:53:44 INFO  Servlet:81 - user/cart
+2020-05-31 17:57:04 INFO  Servlet:81 - 
+2020-05-31 17:57:06 INFO  Servlet:81 - 
+2020-05-31 17:57:11 INFO  Servlet:81 - login
+2020-05-31 17:57:16 INFO  Servlet:81 - login
+2020-05-31 17:57:21 INFO  Servlet:81 - login
+2020-05-31 17:57:22 INFO  Servlet:81 - login
+2020-05-31 17:57:26 INFO  Servlet:81 - log
+2020-05-31 17:57:27 INFO  Servlet:81 - user/menu
+2020-05-31 17:58:15 INFO  Servlet:81 - 
+2020-05-31 17:58:16 INFO  Servlet:81 - 
+2020-05-31 17:59:08 INFO  Servlet:81 - login
+2020-05-31 17:59:10 INFO  Servlet:81 - log
+2020-05-31 17:59:11 INFO  Servlet:81 - user/menu
+2020-05-31 17:59:14 INFO  Servlet:81 - user/cart
+2020-05-31 18:10:08 INFO  Servlet:81 - 
+2020-05-31 18:10:09 INFO  Servlet:81 - 
+2020-05-31 18:10:15 INFO  Servlet:81 - login
+2020-05-31 18:10:19 INFO  Servlet:81 - login
+2020-05-31 18:10:20 INFO  Servlet:81 - login
+2020-05-31 18:10:22 INFO  Servlet:81 - login
+2020-05-31 18:10:25 INFO  Servlet:81 - log
+2020-05-31 18:10:25 INFO  Servlet:81 - user/menu
+2020-05-31 18:10:31 INFO  Servlet:81 - user/cart
+2020-05-31 18:11:33 INFO  Servlet:81 - 
+2020-05-31 18:11:34 INFO  Servlet:81 - 
+2020-05-31 18:11:36 INFO  Servlet:81 - login
+2020-05-31 18:11:39 INFO  Servlet:81 - log
+2020-05-31 18:11:40 INFO  Servlet:81 - user/menu
+2020-05-31 18:11:43 INFO  Servlet:81 - user/cart
+2020-05-31 18:14:50 INFO  Servlet:81 - 
+2020-05-31 18:14:52 INFO  Servlet:81 - 
+2020-05-31 18:14:56 INFO  Servlet:81 - login
+2020-05-31 18:15:00 INFO  Servlet:81 - login
+2020-05-31 18:17:12 INFO  Servlet:81 - 
+2020-05-31 18:17:14 INFO  Servlet:81 - 
+2020-05-31 18:17:18 INFO  Servlet:81 - login
+2020-05-31 18:17:21 INFO  Servlet:81 - log
+2020-05-31 18:17:22 INFO  Servlet:81 - user/menu
+2020-05-31 18:17:23 INFO  Servlet:81 - user/history
+2020-05-31 18:18:07 INFO  Servlet:81 - user/cart
+2020-05-31 18:18:13 INFO  Servlet:81 - user/deleteFromOrder
+2020-05-31 18:18:14 INFO  Servlet:81 - user/cart
+2020-05-31 18:18:16 INFO  Servlet:81 - user/refill
+2020-05-31 18:18:18 INFO  Servlet:81 - user/cart
+2020-05-31 18:18:18 INFO  Servlet:81 - user/bill
+2020-05-31 18:18:20 INFO  Servlet:81 - user/history
+2020-05-31 18:18:21 INFO  Servlet:81 - logout
+2020-05-31 18:18:21 INFO  Servlet:81 - login
+2020-05-31 18:18:28 INFO  Servlet:81 - log
+2020-05-31 18:18:28 INFO  Servlet:81 - admin/update_ingredients
+2020-05-31 18:19:21 INFO  Servlet:81 - admin/update
+2020-05-31 18:19:21 INFO  Servlet:81 - admin/update_ingredients
+2020-05-31 18:19:23 INFO  Servlet:81 - admin/orders_list
+2020-05-31 18:19:25 INFO  Servlet:81 - admin/update_ingredients
+2020-05-31 18:19:27 INFO  Servlet:81 - admin/statistics
+2020-05-31 18:19:30 INFO  Servlet:81 - admin/statistics
+2020-05-31 18:19:31 INFO  Servlet:81 - admin/statistics
+2020-05-31 18:19:33 INFO  Servlet:81 - admin/statistics
+2020-05-31 18:19:34 INFO  Servlet:81 - admin/statistics
+2020-05-31 18:19:36 INFO  Servlet:81 - admin/statistics
+2020-05-31 18:19:37 INFO  Servlet:81 - admin/statistics
+2020-05-31 18:19:39 INFO  Servlet:81 - admin/statistics
+2020-05-31 18:19:40 INFO  Servlet:81 - admin/statistics
+2020-05-31 18:23:31 INFO  Servlet:81 - 
+2020-05-31 18:23:33 INFO  Servlet:81 - 
+2020-05-31 18:23:41 INFO  Servlet:81 - 
+2020-05-31 18:23:43 INFO  Servlet:81 - registration
+2020-05-31 18:23:46 INFO  Servlet:81 - reg
+2020-05-31 18:23:46 INFO  Servlet:81 - registration
+2020-05-31 18:23:54 INFO  Servlet:81 - login
+2020-05-31 18:24:00 INFO  Servlet:81 - log
+2020-05-31 18:24:00 ERROR DBException:9 - DB Exception
+2020-05-31 18:24:00 INFO  Servlet:81 - login
+2020-05-31 18:24:10 INFO  Servlet:81 - log
+2020-05-31 18:24:10 INFO  Servlet:81 - user/menu
+2020-05-31 18:24:15 INFO  Servlet:81 - user/menu
+2020-05-31 18:24:40 INFO  Servlet:81 - user/addToOrder
+2020-05-31 18:24:41 INFO  Servlet:81 - user/menu
+2020-05-31 18:24:42 INFO  Servlet:81 - user/bill
+2020-05-31 18:24:44 INFO  Servlet:81 - user/history
+2020-05-31 18:24:49 INFO  Servlet:81 - user/cart
+2020-05-31 18:24:53 INFO  Servlet:81 - user/confirm
+2020-05-31 18:24:55 INFO  Servlet:81 - user/cart
+2020-05-31 18:25:00 INFO  Servlet:81 - user/history
+2020-05-31 18:25:20 INFO  Servlet:81 - logout
+2020-05-31 18:25:20 INFO  Servlet:81 - login
+2020-05-31 18:25:25 INFO  Servlet:81 - log
+2020-05-31 18:25:25 INFO  Servlet:81 - admin/update_ingredients
+2020-05-31 18:25:29 INFO  Servlet:81 - admin/update
+2020-05-31 18:25:30 INFO  Servlet:81 - admin/update_ingredients
+2020-05-31 18:25:33 INFO  Servlet:81 - admin/orders_list
+2020-05-31 18:26:12 INFO  Servlet:81 - admin/statistics
+2020-05-31 18:26:27 INFO  Servlet:81 - admin/update_ingredients
+2020-05-31 18:26:30 INFO  Servlet:81 - admin/orders_list
+2020-05-31 18:26:32 INFO  Servlet:81 - admin/confirm
+2020-05-31 18:26:32 INFO  Servlet:81 - error
+2020-05-31 18:26:33 INFO  Servlet:81 - user/cart
+2020-05-31 18:26:38 INFO  Servlet:81 - admin/orders_list
+2020-05-31 18:32:47 INFO  Servlet:81 - 
+2020-05-31 18:32:48 INFO  Servlet:81 - 
+2020-05-31 18:34:02 INFO  Servlet:81 - login
+2020-05-31 18:34:04 INFO  Servlet:81 - log
+2020-05-31 18:34:04 INFO  Servlet:81 - user/menu
+2020-05-31 18:34:14 INFO  Servlet:81 - user/menu
+2020-05-31 18:34:16 INFO  Servlet:81 - user/bill
+2020-05-31 18:34:17 INFO  Servlet:81 - user/history
+2020-05-31 18:34:24 INFO  Servlet:81 - user/cart
+2020-05-31 18:34:25 INFO  Servlet:81 - user/refill
+2020-05-31 18:34:39 INFO  Servlet:81 - logout
+2020-05-31 18:34:39 INFO  Servlet:81 - login
+2020-05-31 18:34:44 INFO  Servlet:81 - log
+2020-05-31 18:34:45 INFO  Servlet:81 - admin/update_ingredients
+2020-05-31 18:34:47 INFO  Servlet:81 - admin/orders_list
+2020-05-31 18:34:50 INFO  Servlet:81 - admin/statistics
+2020-05-31 18:34:52 INFO  Servlet:81 - admin/orders_list
+2020-05-31 18:34:53 INFO  Servlet:81 - admin/confirmOrder
+2020-05-31 18:34:54 INFO  Servlet:81 - error
+2020-05-31 18:34:54 INFO  Servlet:81 - user/cart
+2020-05-31 18:35:01 INFO  Servlet:81 - admin/orders_list
+2020-05-31 18:35:19 INFO  Servlet:81 - admin/orders_list
+2020-05-31 18:35:24 INFO  Servlet:81 - error
+2020-05-31 18:35:24 INFO  Servlet:81 - user/cart
+2020-05-31 18:35:50 INFO  Servlet:81 - 
+2020-05-31 18:35:51 INFO  Servlet:81 - 
+2020-05-31 18:36:44 INFO  Servlet:82 - 
+2020-05-31 18:36:46 INFO  Servlet:82 - 
+2020-05-31 18:36:53 INFO  Servlet:82 - login
+2020-05-31 18:36:55 INFO  Servlet:82 - log
+2020-05-31 18:36:55 INFO  Servlet:82 - user/menu
+2020-05-31 18:37:00 INFO  Servlet:82 - logout
+2020-05-31 18:37:00 INFO  Servlet:82 - login
+2020-05-31 18:37:07 INFO  Servlet:82 - log
+2020-05-31 18:37:07 INFO  Servlet:82 - admin/update_ingredients
+2020-05-31 18:37:10 INFO  Servlet:82 - admin/orders_list
+2020-05-31 18:37:12 INFO  Servlet:82 - admin/confirmOrder
+2020-05-31 18:37:14 INFO  Servlet:82 - admin/orders_list
+2020-05-31 18:37:15 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:38:09 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:53:10 INFO  Servlet:82 - 
+2020-05-31 18:53:12 INFO  Servlet:82 - 
+2020-05-31 18:53:18 INFO  Servlet:82 - login
+2020-05-31 18:53:23 INFO  Servlet:82 - log
+2020-05-31 18:53:24 INFO  Servlet:82 - admin/update_ingredients
+2020-05-31 18:53:27 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:53:32 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:53:36 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:53:41 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:53:51 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:53:53 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:53:55 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:53:56 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:54:06 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:54:08 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:54:12 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:54:20 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:56:01 INFO  Servlet:82 - 
+2020-05-31 18:56:03 INFO  Servlet:82 - 
+2020-05-31 18:56:04 INFO  Servlet:82 - login
+2020-05-31 18:56:08 INFO  Servlet:82 - log
+2020-05-31 18:56:09 INFO  Servlet:82 - admin/update_ingredients
+2020-05-31 18:56:09 INFO  Servlet:82 - error
+2020-05-31 18:56:09 INFO  Servlet:82 - log
+2020-05-31 18:56:16 INFO  Servlet:82 - error
+2020-05-31 18:56:16 INFO  Servlet:82 - login
+2020-05-31 18:56:20 INFO  Servlet:82 - error
+2020-05-31 18:56:20 INFO  Servlet:82 - login
+2020-05-31 18:56:23 INFO  Servlet:82 - error
+2020-05-31 18:56:23 INFO  Servlet:82 - 
+2020-05-31 18:56:47 INFO  Servlet:82 - 
+2020-05-31 18:56:48 INFO  Servlet:82 - 
+2020-05-31 18:56:50 INFO  Servlet:82 - login
+2020-05-31 18:56:51 INFO  Servlet:82 - log
+2020-05-31 18:56:51 INFO  Servlet:82 - user/menu
+2020-05-31 18:56:54 INFO  Servlet:82 - logout
+2020-05-31 18:56:54 INFO  Servlet:82 - login
+2020-05-31 18:56:59 INFO  Servlet:82 - log
+2020-05-31 18:56:59 INFO  Servlet:82 - admin/update_ingredients
+2020-05-31 18:57:02 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:57:17 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:57:21 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:58:03 INFO  Servlet:82 - 
+2020-05-31 18:58:05 INFO  Servlet:82 - 
+2020-05-31 18:58:09 INFO  Servlet:82 - login
+2020-05-31 18:58:14 INFO  Servlet:82 - log
+2020-05-31 18:58:14 INFO  Servlet:82 - admin/update_ingredients
+2020-05-31 18:58:16 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:58:22 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:58:26 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:58:28 INFO  Servlet:82 - admin/statistics
+2020-05-31 18:58:59 INFO  Servlet:82 - logout
+2020-05-31 18:58:59 INFO  Servlet:82 - login
+2020-05-31 22:13:54 INFO  Servlet:82 - login

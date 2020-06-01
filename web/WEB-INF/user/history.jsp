@@ -27,8 +27,9 @@
             </div>
             <div class="col-4 logout">
                 <div>
-                    <div class="name">${sessionScope.name}</div>
+                    <div class="name">${sessionScope.user.nameEng}</div>
                     <button type="button" class="btn btn-outline-secondary" onclick="location.href='/web/logout'"><fmt:message key="button.logout"/></button>
+                    <div class="name"> <fmt:message key="header.balance"/> ${sessionScope.user.balance} <fmt:message key="header.currency"/> </div>
                 </div>
             </div>
         </div>
@@ -50,7 +51,6 @@
 <div class="container">
     <section class="cart">
         <div class="row cart_item">
-            <div class="col-1" ><fmt:message key="field.id"/></div>
             <div class="col-2" ><fmt:message key="field.img"/></div>
             <div class="col-4">
                 <div class="customer" ><fmt:message key="field.order"/></div>
@@ -75,7 +75,6 @@
     <section class="cart">
 <c:forEach items="${requestScope.stories}" var="story">
         <div class="row cart_item" >
-            <div class="col-1" >${story.id}</div>
             <div class="col-2">
                 <img src="${pageContext.request.contextPath}/resources/img/food.jpg" alt="">
             </div>
@@ -107,15 +106,27 @@
 </div>
 <footer>
     <div class="container">
-        <div class="row">
-            <div class="col-4" >
-                <fmt:message key="footer.name"/>
+        <div class="row footer_info">
+            <div class="col-4 footer-col logo">
+                <fmt:message key="header.restaurant"/>
             </div>
-            <div class="col-4 date">
-                16.04.2020
+            <div class="col-4 footer-col contacts">
+                <div class="title"><fmt:message key="footer.contacts"/></div>
+                <a href="tel:+380935947785" class="phone">+38 093 594 77 85</a>
+                <a href="mailto:kelels2015@gmail.com" class="email">kelels2015@gmail.com</a>
+                <a href="https://github.com/kelelas">github.com/kelelas</a>
             </div>
-            <div class="col-4 version" >
-                <fmt:message key="footer.version"/>
+            <div class="col-4 footer-col version">
+                <div class="title">
+                    <fmt:message key="footer.version"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row copyright">
+            <div class="col-12">
+                Made by Osypchuk Vladyslav
             </div>
         </div>
     </div>

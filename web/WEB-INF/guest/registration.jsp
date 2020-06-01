@@ -12,7 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <%--    <link rel="stylesheet"  href="../../static/test.css" type="text/css">--%>
     <style><%@include file="/resources/static/test.css"%></style>
 </head>
 
@@ -65,20 +64,32 @@
         <input type="email" name="email" id="email" placeholder="ivanov@gmail.com">
         <label for="password" ><fmt:message key="registration.password"/></label>
         <input type="password" name="password" id="password" placeholder="********">
-        <input type="submit" <fmt:message key="button.signup"/>>
+        <input type="submit" value="<fmt:message key="button.signup"/>">
     </form>
 </section>
 <footer>
     <div class="container">
-        <div class="row">
-            <div class="col-4" >
-                <fmt:message key="footer.name"/>
+        <div class="row footer_info">
+            <div class="col-4 footer-col logo">
+                <fmt:message key="header.restaurant"/>
             </div>
-            <div class="col-4 date">
-                15.03.2020
+            <div class="col-4 footer-col contacts">
+                <div class="title"><fmt:message key="footer.contacts"/></div>
+                <a href="tel:+380935947785" class="phone">+38 093 594 77 85</a>
+                <a href="mailto:kelels2015@gmail.com" class="email">kelels2015@gmail.com</a>
+                <a href="https://github.com/kelelas">github.com/kelelas</a>
             </div>
-            <div class="col-4 version" >
-                <fmt:message key="footer.version"/>
+            <div class="col-4 footer-col version">
+                <div class="title">
+                    <fmt:message key="footer.version"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row copyright">
+            <div class="col-12">
+                Made by Osypchuk Vladyslav
             </div>
         </div>
     </div>

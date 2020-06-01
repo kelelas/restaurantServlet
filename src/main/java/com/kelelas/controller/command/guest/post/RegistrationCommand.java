@@ -1,7 +1,9 @@
-package com.kelelas.controller.command.guest;
+package com.kelelas.controller.command.guest.post;
 
 import com.kelelas.controller.command.Command;
-import com.kelelas.controller.config.*;
+import com.kelelas.controller.config.BCryptPasswordEncoder;
+import com.kelelas.controller.config.PageConfig;
+import com.kelelas.controller.config.Regex;
 import com.kelelas.model.dto.NewUser;
 import com.kelelas.model.entity.RoleType;
 import com.kelelas.model.entity.User;
@@ -32,20 +34,23 @@ public class RegistrationCommand implements Command {
     }
     public String save(NewUser newUser){
 
-            return verify(newUser)
-                    ?  userService.saveNewUser(new User.Builder()
-                                    .nameUkr(newUser.getNameUkr())
-                                    .nameEng(newUser.getNameEng())
-                                    .email(newUser.getEmail())
-                                    .password(new BCryptPasswordEncoder().encode(newUser.getPassword()))
-                                    .role(RoleType.USER)
-                                    .isActive(true)
-                                    .balance(5000)
-                                    .build())
-                                    ? PageConfig.getProperty("path.page.redirect.user.login")
-                                    : PageConfig.getProperty("path.page.redirect.registrationErrorUserAlreadyExist")
-
-                    : PageConfig.getProperty("path.page.redirect.registrationRegexError");
+        if (verify(newUser)) {
+            try {
+                userService.save(new User.Builder()
+                        .nameUkr(newUser.getNameUkr())
+                        .nameEng(newUser.getNameEng())
+                        .email(newUser.getEmail())
+                        .password(new BCryptPasswordEncoder().encode(newUser.getPassword()))
+                        .role(RoleType.USER)
+                        .isActive(true)
+                        .balance(5000)
+                        .build());
+                return "redirect:/login";
+            } catch (Exception e) {
+                return "redirect:/registration?error=userAlreadyExist";
+            }
+        }else
+            return "redirect:/registration?regex=error";
     }
     public boolean verify(NewUser newUser){
         return newUser.getEmail().matches(Regex.EMAIL_REGEX)

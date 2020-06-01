@@ -14,19 +14,10 @@ public class UserService {
         dao = factory.createUserDao();
     }
 
-//todo change exception to my own
-    public User findByEmail(String email) throws Exception {
+    public User findByEmail(String email){
         return dao.findByEmail(email).orElseThrow(DBException::new);
     }
 
-    public boolean saveNewUser(User user){
-        try {
-            dao.create(user);
-            return true;
-        }catch (Exception e){
-            return false;
-        }
-    }
 
     public void save(User user){
         try {
@@ -36,15 +27,4 @@ public class UserService {
         }
     }
 
-    public void setAutoCommitFalse() {
-        dao.setAutoCommitFalse();
-    }
-
-    public void commit(){
-        dao.commit();
-    }
-
-    public void rollback() {
-        dao.rollback();
-    }
 }

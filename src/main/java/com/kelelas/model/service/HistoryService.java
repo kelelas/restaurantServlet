@@ -8,7 +8,9 @@ import com.kelelas.model.exception.DBException;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class HistoryService {
     DaoFactory factory;
@@ -32,34 +34,22 @@ public class HistoryService {
         dao.update(history);}
 
     public List<HistoryDTO> getLocaleStoriesByUserId(HttpServletRequest request, int userId){
-        return dao.getLocaleStoriesByUserId(request.getSession().getAttribute("lang").toString(), userId);
+        return dao.getLocaleStoriesByUserId(request.getSession().getAttribute("lang").toString(), userId)
+                .stream().sorted(Comparator.comparing(HistoryDTO::getId).reversed()).collect(Collectors.toList());
     }
 
     public List<HistoryDTO> getLocaleStoriesByStatus(HttpServletRequest request, int status){
-        return dao.getLocaleStoriesByStatus(request.getSession().getAttribute("lang").toString(), status);
-    }
-
-    public List<HistoryDTO> getLocaleStoriesByStatusAndUserId(HttpServletRequest request, int status,  int userId){
-        return dao.getLocaleStoriesByStatusAndUserId(request.getSession().getAttribute("lang").toString(), userId,  status);
+        return dao.getLocaleStoriesByStatus(request.getSession().getAttribute("lang").toString(), status)
+                .stream().sorted(Comparator.comparing(HistoryDTO::getId).reversed()).collect(Collectors.toList());
     }
 
     public List<HistoryDTO> getLocaleStories(HttpServletRequest request, int offset, int amountOfRecords){
-        return dao.getLocaleStories(request.getSession().getAttribute("lang").toString(), offset, amountOfRecords);
+        return dao.getLocaleStories(request.getSession().getAttribute("lang").toString(), offset, amountOfRecords)
+                .stream().sorted(Comparator.comparing(HistoryDTO::getId).reversed()).collect(Collectors.toList());
     }
 
     public int numberOfRowsInTable(){
         return dao.numberOfRowsInTable();
     }
 
-    public void setAutoCommitFalse(){
-        dao.setAutoCommitFalse();
-    }
-
-    public void commit() {
-        dao.commit();
-    }
-
-    public void rollback() {
-        dao.rollback();
-    }
 }

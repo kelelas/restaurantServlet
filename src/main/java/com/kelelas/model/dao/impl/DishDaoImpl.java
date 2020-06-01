@@ -174,31 +174,4 @@ public class DishDaoImpl implements DishDao {
         dishes.putIfAbsent(dish.getId(), dish);
         return dishes.get(dish.getId());
     }
-
-    @Override
-    public void setAutoCommitFalse()  {
-        try {
-            connection.setAutoCommit(false);
-        } catch (SQLException e) {
-            throw new DBException(e);
-        }
-    }
-
-    @Override
-    public void commit() {
-        try {
-            connection.commit();
-        } catch (SQLException e) {
-            throw new DBException(e);
-        }
-    }
-
-    @Override
-    public void rollback() {
-        try {
-            connection.rollback();
-        } catch (SQLException e) {
-            throw new DBException(e);
-        }
-    }
 }

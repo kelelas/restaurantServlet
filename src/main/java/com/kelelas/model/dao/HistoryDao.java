@@ -1,11 +1,9 @@
 package com.kelelas.model.dao;
 
-import com.kelelas.model.dto.DishDTO;
 import com.kelelas.model.dto.HistoryDTO;
 import com.kelelas.model.entity.History;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface HistoryDao extends GenericDao<History> {
     List<HistoryDTO> getLocaleStories(String locale, int offset, int amount);

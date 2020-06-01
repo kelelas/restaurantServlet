@@ -1,9 +1,20 @@
 package com.kelelas.controller;
 
-import com.kelelas.controller.command.*;
-import com.kelelas.controller.command.admin.*;
+import com.kelelas.controller.command.Command;
+import com.kelelas.controller.command.LogoutCommand;
+import com.kelelas.controller.command.admin.OrderListCommand;
+import com.kelelas.controller.command.admin.StatisticsCommand;
+import com.kelelas.controller.command.admin.UpdateIngredientsCommand;
+import com.kelelas.controller.command.admin.post.ConfirmOrderCommand;
+import com.kelelas.controller.command.admin.post.UpdateCommand;
 import com.kelelas.controller.command.guest.*;
+import com.kelelas.controller.command.guest.post.LoginCommand;
+import com.kelelas.controller.command.guest.post.RegistrationCommand;
 import com.kelelas.controller.command.user.*;
+import com.kelelas.controller.command.user.post.AddToOrderCommand;
+import com.kelelas.controller.command.user.post.ConfirmCommand;
+import com.kelelas.controller.command.user.post.DeleteFromOrderCommand;
+import com.kelelas.controller.command.user.post.PayForOrderCommand;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletConfig;
@@ -43,6 +54,14 @@ public class Servlet extends HttpServlet {
         commands.put("user/history", new HistoryCommand());
         commands.put("user/cart", new CartCommand());
         commands.put("user/bill", new BillCommand());
+
+        commands.put("user/addToOrder", new AddToOrderCommand());
+        commands.put("user/payForOrder", new PayForOrderCommand());
+        commands.put("user/confirm", new ConfirmCommand());
+        commands.put("user/deleteFromOrder", new DeleteFromOrderCommand());
+
+        commands.put("admin/confirmOrder", new ConfirmOrderCommand());
+        commands.put("admin/update", new UpdateCommand());
     }
 
     public void doGet(HttpServletRequest request,

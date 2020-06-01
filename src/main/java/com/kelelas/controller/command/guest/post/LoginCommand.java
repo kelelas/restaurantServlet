@@ -1,4 +1,4 @@
-package com.kelelas.controller.command.guest;
+package com.kelelas.controller.command.guest.post;
 
 import com.kelelas.controller.command.Command;
 import com.kelelas.controller.command.CommandUtility;

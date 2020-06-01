@@ -11,6 +11,7 @@ public abstract class DaoFactory {
     public abstract UserDao createUserDao();
     public abstract BillDao createBillDao();
     public abstract CartDao createCartDao();
+    public abstract TransactionDao createTransactionDao();
 
     public static DaoFactory getInstance(){
         if( daoFactory == null ){

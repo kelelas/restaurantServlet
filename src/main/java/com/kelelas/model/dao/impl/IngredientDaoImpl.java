@@ -7,7 +7,9 @@ import com.kelelas.model.entity.Ingredient;
 import com.kelelas.model.exception.DBException;
 
 import java.sql.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 public class IngredientDaoImpl implements IngredientDao {
     private Connection connection;
@@ -131,30 +133,4 @@ public class IngredientDaoImpl implements IngredientDao {
 
     }
 
-    @Override
-    public void setAutoCommitFalse(){
-        try {
-            connection.setAutoCommit(false);
-        } catch (SQLException e) {
-            throw new DBException(e);
-        }
-    }
-
-    @Override
-    public void commit(){
-        try {
-            connection.commit();
-        } catch (SQLException e) {
-            throw new DBException(e);
-        }
-    }
-
-    @Override
-    public void rollback(){
-        try {
-            connection.rollback();
-        } catch (SQLException e) {
-            throw new DBException(e);
-        }
-    }
 }

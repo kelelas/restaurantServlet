@@ -13,12 +13,10 @@ import java.util.List;
 
 public class OrderListCommand implements Command {
     HistoryService historyService;
-    AdminPageService adminPageService;
-    private static final Logger logger = Logger.getLogger(OrderListCommand.class);
+
 
     public OrderListCommand() {
         this.historyService = new HistoryService();
-        this.adminPageService = new AdminPageService();
     }
 
     @Override
@@ -30,15 +28,6 @@ public class OrderListCommand implements Command {
         if (!items.isEmpty())
             request.setAttribute("items", items);
 
-       String id = request.getParameter("id");
-        if (id!=null) {
-            try {
-                adminPageService.updateStoryById(id);
-                return PageConfig.getProperty("path.page.redirect.admin.orderList");
-            } catch (Exception e) {
-                logger.error(e.getMessage());
-            }
-        }
         return PageConfig.getProperty("path.page.admin.orderList");
     }
 }

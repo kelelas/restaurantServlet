@@ -38,21 +38,15 @@
     <div class="container">
         <ul>
             <li><a href="/web/admin/orders_list"><fmt:message key="page.listOfOrders"/> </a></li>
-            <!--            <li><a href="/admin/bill_confirm">Отправить счет</a></li>-->
             <li><a href="/web/admin/statistics"><fmt:message key="page.statistics"/></a></li>
             <li><a href="/web/admin/update_ingredients"><fmt:message key="page.updateIngredients"/></a></li>
         </ul>
     </div>
 </nav>
 <h1><fmt:message key="text.history"/></h1>
-<%--<form method="post" action="/admin/filter">--%>
-<%--    <input type="text" name="filter" id="filter" th:value="${filterValue}">--%>
-<%--    <input type="submit" value="FilterByUserId">--%>
-<%--</form>--%>
 <div class="container">
     <section class="cart">
         <div class="row cart_item" >
-            <div class="col-1" ><fmt:message key="field.id"/></div>
             <div class="col-1"><fmt:message key="field.name"/></div>
             <div class="col-4">
                 <div class="customer"><fmt:message key="field.order"/></div>
@@ -77,7 +71,6 @@
     <section class="cart">
 <c:forEach items="${requestScope.items}" var="item">
         <div class="row cart_item" >
-            <div class="col-1">${item.id}</div>
             <div class="col-1">${item.userName}</div>
             <div class="col-4 in_column">
     <c:forEach items="${item.dishes}" var="dish">
@@ -128,15 +121,27 @@
 </nav>
 <footer>
     <div class="container">
-        <div class="row">
-            <div class="col-4" >
-                <fmt:message key="footer.name"/>
+        <div class="row footer_info">
+            <div class="col-4 footer-col logo">
+                <fmt:message key="header.restaurant"/>
             </div>
-            <div class="col-4 date">
-                16.04.2020
+            <div class="col-4 footer-col contacts">
+                <div class="title"><fmt:message key="footer.contacts"/></div>
+                <a href="tel:+380935947785" class="phone">+38 093 594 77 85</a>
+                <a href="mailto:kelels2015@gmail.com" class="email">kelels2015@gmail.com</a>
+                <a href="https://github.com/kelelas">github.com/kelelas</a>
             </div>
-            <div class="col-4 version" >
-                <fmt:message key="footer.version"/>
+            <div class="col-4 footer-col version">
+                <div class="title">
+                    <fmt:message key="footer.version"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row copyright">
+            <div class="col-12">
+                Made by Osypchuk Vladyslav
             </div>
         </div>
     </div>
