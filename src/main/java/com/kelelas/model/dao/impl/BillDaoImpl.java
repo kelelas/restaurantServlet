@@ -4,12 +4,14 @@ import com.kelelas.controller.config.QueryConfig;
 import com.kelelas.model.dao.BillDao;
 import com.kelelas.model.dto.BillDTO;
 import com.kelelas.model.dto.DishDTO;
+import com.kelelas.model.dto.HistoryDTO;
 import com.kelelas.model.entity.Bill;
 import com.kelelas.model.entity.Dish;
 import com.kelelas.model.entity.Ingredient;
 import com.kelelas.model.exception.DBException;
 
 import java.sql.*;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -137,8 +139,16 @@ public class BillDaoImpl implements BillDao {
             ps.setInt(2, userId);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                BillDTO bill = extractLocaleBillFromResultSet(rs);
-                DishDTO dish =DishDaoImpl.extractLocaleDishFromResultSet(rs);
+                BillDTO bill;
+                DishDTO dish;
+                if(locale.equals("ua")){
+                    bill = extractToUkrBillFromResultSet(rs);
+                    dish =DishDaoImpl.extractToUkrDishFromResultSet(rs);
+                }else {
+                    bill = extractToEngBillFromResultSet(rs);
+                    dish = DishDaoImpl.extractToEngDishFromResultSet(rs);
+                }
+
                 bill = makeUniqueBillDTO(bills, bill);
                 bill.getDishes().add(dish);
 
@@ -152,11 +162,20 @@ public class BillDaoImpl implements BillDao {
         return result;
     }
 
-    static BillDTO extractLocaleBillFromResultSet(ResultSet rs) throws SQLException {
+    static BillDTO extractToUkrBillFromResultSet(ResultSet rs) throws SQLException {
         return new BillDTO.Builder()
                 .id(rs.getInt("b.id"))
-                .date(rs.getTimestamp("b.date").toLocalDateTime())
+                .date(rs.getTimestamp("b.date").toLocalDateTime().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss")))
                 .price(rs.getInt("b.price"))
+                .status(rs.getString("s_status"))
+                .userName(rs.getString("u_user"))
+                .build();
+    }
+    static BillDTO extractToEngBillFromResultSet(ResultSet rs) throws SQLException {
+        return new BillDTO.Builder()
+                .id(rs.getInt("b.id"))
+                .date(rs.getTimestamp("b.date").toLocalDateTime().format(DateTimeFormatter.ofPattern("MM.dd.yyyy HH:mm:ss")))
+                .price(rs.getInt("b.price")/8)
                 .status(rs.getString("s_status"))
                 .userName(rs.getString("u_user"))
                 .build();

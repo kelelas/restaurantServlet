@@ -27,9 +27,17 @@
             </div>
             <div class="col-4 logout">
                 <div>
-                    <div class="name">${sessionScope.user.nameEng}</div>
-                    <button type="button" class="btn btn-outline-secondary" onclick="location.href='/web/logout'"><fmt:message key="button.logout"/></button>
-                    <div class="name"> <fmt:message key="header.balance"/> ${sessionScope.user.balance} <fmt:message key="header.currency"/> </div>
+                    <c:if test="${sessionScope.lang eq 'ua'}">
+                        <div class="name">${sessionScope.user.nameUkr}</div>
+                        <button type="button" class="btn btn-outline-secondary" onclick="location.href='/web/logout'"><fmt:message key="button.logout"/></button>
+                        <div class="name"> <fmt:message key="header.balance"/> ${sessionScope.user.balance} <fmt:message key="header.currency"/> </div>
+                    </c:if>
+                    <c:if test="${sessionScope.lang eq 'en'}">
+                        <div class="name">${sessionScope.user.nameEng}</div>
+                        <button type="button" class="btn btn-outline-secondary" onclick="location.href='/web/logout'"><fmt:message key="button.logout"/></button>
+                        <fmt:parseNumber var = "balanceEng" integerOnly = "true" type = "number" value = "${sessionScope.user.balance/8}" />
+                        <div class="name"> <fmt:message key="header.balance"/> ${balanceEng} <fmt:message key="header.currency"/> </div>
+                    </c:if>
                 </div>
             </div>
         </div>
@@ -77,7 +85,7 @@
 <c:forEach items="${requestScope.order}" var="dish">
         <div class="row cart_item">
             <div class="col-3">
-                <img src="${pageContext.request.contextPath}${dish.image}" alt="">
+                <img src="${pageContext.request.contextPath}/resources${dish.image}" alt="">
             </div>
             <div class="col-4 info">
                 <div class="title">
@@ -90,7 +98,7 @@
                 </div>
             </div>
             <div class="col-4">
-                <div class="price">${dish.price}</div>
+                <div class="price">${dish.price}<fmt:message key="header.currency"/></div>
             </div>
 
             <div class="col-1">
@@ -103,7 +111,14 @@
 </c:forEach>
         <div class="summary">
             <div class="title"><fmt:message key="text.summary"/></div>
-            <div class="amount">${requestScope.sum}</div>
+            <c:if test="${sessionScope.lang eq 'ua'}">
+                <div class="amount">${requestScope.sum} <fmt:message key="header.currency"/></div>
+            </c:if>
+            <c:if test="${sessionScope.lang eq 'en'}">
+                <fmt:parseNumber var = "sumEng" integerOnly = "true" type = "number" value = "${requestScope.sum/8}" />
+                <div class="amount">${sumEng} <fmt:message key="header.currency"/></div>
+            </c:if>
+
         </div>
         <c:if test="${requestScope.sum > 0}">
             <form action="confirm" method="post" >

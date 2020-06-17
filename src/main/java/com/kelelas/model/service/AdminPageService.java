@@ -22,13 +22,6 @@ public class AdminPageService {
         this.transactionService = new TransactionService();
     }
 
-//    public AdminPageService(HistoryService historyService, DishService dishService, IngredientService ingredientService, BillService billService) {
-//        this.historyService = historyService;
-//        this.dishService = dishService;
-//        this.ingredientService = ingredientService;
-//        this.billService = billService;
-//    }
-
     public void confirm(List<Dish> dishes) {
         try {
             dishes.stream()

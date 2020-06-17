@@ -6,7 +6,7 @@ import java.util.List;
 
 public class HistoryDTO {
     private int id;
-    private LocalDateTime date;
+    private String date;
     private int price;
     private String status;
     private String userName;
@@ -23,11 +23,11 @@ public class HistoryDTO {
         this.id = id;
     }
 
-    public LocalDateTime getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -69,7 +69,7 @@ public class HistoryDTO {
             history.id = id;
             return this;
         }
-        public Builder date(LocalDateTime date){
+        public Builder date(String date){
             history.date = date;
             return this;
         }

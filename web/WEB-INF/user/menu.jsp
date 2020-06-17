@@ -27,10 +27,18 @@
             </div>
             <div class="col-4 logout">
                 <div>
-                    <div class="name">${sessionScope.user.nameEng}</div>
-                    <button type="button" class="btn btn-outline-secondary" onclick="location.href='/web/logout'"><fmt:message key="button.logout"/></button>
-                    <div class="name"> <fmt:message key="header.balance"/> ${sessionScope.user.balance} <fmt:message key="header.currency"/> </div>
-                </div>
+                    <c:if test="${sessionScope.lang eq 'ua'}">
+                        <div class="name">${sessionScope.user.nameUkr}</div>
+                        <button type="button" class="btn btn-outline-secondary" onclick="location.href='/web/logout'"><fmt:message key="button.logout"/></button>
+                        <div class="name"> <fmt:message key="header.balance"/> ${sessionScope.user.balance} <fmt:message key="header.currency"/> </div>
+                    </c:if>
+                    <c:if test="${sessionScope.lang eq 'en'}">
+                        <div class="name">${sessionScope.user.nameEng}</div>
+                        <button type="button" class="btn btn-outline-secondary" onclick="location.href='/web/logout'"><fmt:message key="button.logout"/></button>
+                        <fmt:parseNumber var = "balanceEng" integerOnly = "true" type = "number" value = "${sessionScope.user.balance/8}" />
+                        <div class="name"> <fmt:message key="header.balance"/> ${balanceEng} <fmt:message key="header.currency"/> </div>
+                    </c:if>
+                   </div>
             </div>
         </div>
     </div>
@@ -53,7 +61,7 @@
                 <div class="col-4">
 
                     <div class="card" style="width: 18rem;">
-                        <img src="${pageContext.request.contextPath}${dish.image}" class="card-img-top" alt="">
+                        <img src="${pageContext.request.contextPath}/resources${dish.image}" class="card-img-top" alt="">
                         <div class="card-body">
                             <h5 class="card-title">${dish.name}</h5>
                             <p class="card-text">
@@ -61,7 +69,7 @@
                             <div>${ingredient.name}</div>
                                 </c:forEach>
                             <div class="wrapper">
-                                <span class="price">${dish.price}</span>
+                                <span class="price">${dish.price}<fmt:message key="header.currency"/></span>
                                 <form action="addToOrder" method="post" >
                                     <input type="hidden" name="orderId" id="orderId" value="${dish.id}"/>
                                     <input type="submit" class="btn btn-primary" value="<fmt:message key="button.basket"/>">

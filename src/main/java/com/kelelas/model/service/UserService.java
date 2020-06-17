@@ -21,10 +21,17 @@ public class UserService {
 
     public void save(User user){
         try {
-            dao.update(user);
+            dao.create(user);
         }catch (Exception e){
             throw new DBException(e);
         }
     }
 
+    public void update(User user) {
+        try {
+            dao.update(user);
+        }catch (Exception e){
+            throw new DBException(e);
+        }
+    }
 }

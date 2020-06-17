@@ -98,12 +98,21 @@ public class DishDaoImpl implements DishDao {
 
     }
 
-    static DishDTO extractLocaleDishFromResultSet(ResultSet rs) throws SQLException {
+    static DishDTO extractToUkrDishFromResultSet(ResultSet rs) throws SQLException {
         return new DishDTO.Builder()
                 .id(rs.getInt("d.id"))
                 .name(rs.getString("d_name"))
                 .image(rs.getString("d.image"))
                 .price(rs.getInt("d.price"))
+                .build();
+
+    }
+    static DishDTO extractToEngDishFromResultSet(ResultSet rs) throws SQLException {
+        return new DishDTO.Builder()
+                .id(rs.getInt("d.id"))
+                .name(rs.getString("d_name"))
+                .image(rs.getString("d.image"))
+                .price(rs.getInt("d.price")/8)
                 .build();
 
     }
@@ -122,7 +131,11 @@ public class DishDaoImpl implements DishDao {
                         QueryConfig.getProperty("dish.findAllEngDishes"));
             }
             while (rs.next()) {
-                DishDTO dish = extractLocaleDishFromResultSet(rs);
+                DishDTO dish;
+                if (locale.equals("ua"))
+                    dish = extractToUkrDishFromResultSet(rs);
+                else
+                    dish = extractToEngDishFromResultSet(rs);
                 IngredientDTO ingredient = IngredientDaoImpl.extractLocaleIngredientFromResultSet(rs);
                 dish = makeUniqueDishDTO(dishes, dish);
                 dish.getIngredients().add(ingredient);
@@ -153,7 +166,10 @@ public class DishDaoImpl implements DishDao {
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                dish = extractLocaleDishFromResultSet(rs);
+                if (locale.equals("ua"))
+                    dish = extractToUkrDishFromResultSet(rs);
+                else
+                    dish = extractToEngDishFromResultSet(rs);
                 IngredientDTO ingredient = IngredientDaoImpl.extractLocaleIngredientFromResultSet(rs);
                 dish = makeUniqueDishDTO(dishes, dish);
                 dish.getIngredients().add(ingredient);

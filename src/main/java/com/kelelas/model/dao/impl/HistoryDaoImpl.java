@@ -10,6 +10,7 @@ import com.kelelas.model.entity.Ingredient;
 import com.kelelas.model.exception.DBException;
 
 import java.sql.*;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -137,8 +138,15 @@ public class HistoryDaoImpl implements HistoryDao {
             ps.setInt(2, amountOfRecords);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                HistoryDTO history = extractLocaleHistoryFromResultSet(rs);
-                DishDTO dish =DishDaoImpl.extractLocaleDishFromResultSet(rs);
+                HistoryDTO history;
+                DishDTO dish;
+                if(locale.equals("ua")) {
+                    history = extractToUkrHistoryFromResultSet(rs);
+                    dish = DishDaoImpl.extractToUkrDishFromResultSet(rs);
+                }else {
+                    history = extractToEngHistoryFromResultSet(rs);
+                    dish = DishDaoImpl.extractToEngDishFromResultSet(rs);
+                }
                 history = makeUniqueHistoryDTO(stories, history);
                 history.getDishes().add(dish);
 
@@ -169,8 +177,15 @@ public class HistoryDaoImpl implements HistoryDao {
             ps.setInt(2, userId);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                HistoryDTO history = extractLocaleHistoryFromResultSet(rs);
-                DishDTO dish =DishDaoImpl.extractLocaleDishFromResultSet(rs);
+                HistoryDTO history;
+                DishDTO dish;
+                if(locale.equals("ua")) {
+                    history = extractToUkrHistoryFromResultSet(rs);
+                    dish = DishDaoImpl.extractToUkrDishFromResultSet(rs);
+                }else {
+                    history = extractToEngHistoryFromResultSet(rs);
+                    dish = DishDaoImpl.extractToEngDishFromResultSet(rs);
+                }
                 history = makeUniqueHistoryDTO(stories, history);
                 history.getDishes().add(dish);
 
@@ -200,8 +215,15 @@ public class HistoryDaoImpl implements HistoryDao {
             ps.setInt(1, status);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                HistoryDTO history = extractLocaleHistoryFromResultSet(rs);
-                DishDTO dish =DishDaoImpl.extractLocaleDishFromResultSet(rs);
+                HistoryDTO history;
+                DishDTO dish;
+                if(locale.equals("ua")) {
+                    history = extractToUkrHistoryFromResultSet(rs);
+                    dish = DishDaoImpl.extractToUkrDishFromResultSet(rs);
+                }else {
+                    history = extractToEngHistoryFromResultSet(rs);
+                    dish = DishDaoImpl.extractToEngDishFromResultSet(rs);
+                }
                 history = makeUniqueHistoryDTO(stories, history);
                 history.getDishes().add(dish);
 
@@ -231,8 +253,15 @@ public class HistoryDaoImpl implements HistoryDao {
             ps.setInt(1, userId);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                HistoryDTO history = extractLocaleHistoryFromResultSet(rs);
-                DishDTO dish =DishDaoImpl.extractLocaleDishFromResultSet(rs);
+                HistoryDTO history;
+                DishDTO dish;
+                if(locale.equals("ua")) {
+                    history = extractToUkrHistoryFromResultSet(rs);
+                    dish = DishDaoImpl.extractToUkrDishFromResultSet(rs);
+                }else {
+                    history = extractToEngHistoryFromResultSet(rs);
+                    dish = DishDaoImpl.extractToEngDishFromResultSet(rs);
+                }
                 history = makeUniqueHistoryDTO(stories, history);
                 history.getDishes().add(dish);
 
@@ -246,11 +275,20 @@ public class HistoryDaoImpl implements HistoryDao {
         return result;
     }
 
-    static HistoryDTO extractLocaleHistoryFromResultSet(ResultSet rs) throws SQLException {
+    static HistoryDTO extractToUkrHistoryFromResultSet(ResultSet rs) throws SQLException {
         return new HistoryDTO.Builder()
                 .id(rs.getInt("h.id"))
-                .date(rs.getTimestamp("h.date").toLocalDateTime())
+                .date(rs.getTimestamp("h.date").toLocalDateTime().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss")))
                 .price(rs.getInt("h.price"))
+                .status(rs.getString("s_status"))
+                .userName(rs.getString("u_user"))
+                .build();
+    }
+    static HistoryDTO extractToEngHistoryFromResultSet(ResultSet rs) throws SQLException {
+        return new HistoryDTO.Builder()
+                .id(rs.getInt("h.id"))
+                .date(rs.getTimestamp("h.date").toLocalDateTime().format(DateTimeFormatter.ofPattern("MM.dd.yyyy HH:mm:ss")))
+                .price(rs.getInt("h.price")/8)
                 .status(rs.getString("s_status"))
                 .userName(rs.getString("u_user"))
                 .build();

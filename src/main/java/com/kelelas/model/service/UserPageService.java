@@ -20,15 +20,6 @@ public class UserPageService {
     User user;
     int sum= ConstantsConfig.getIntProperty("number.defaultNumber");
 
-//    public UserPageService(UserService userService, DishService dishService, HistoryService historyService, CartService cartService, BillService billService, HttpServletRequest request) {
-//        this.userService = userService;
-//        this.dishService = dishService;
-//        this.historyService = historyService;
-//        this.cartService = cartService;
-//        this.billService = billService;
-//        this.request = request;
-//        user = (User) request.getSession().getAttribute("user");
-//    }
 
     public UserPageService(HttpServletRequest request) {
         this.userService = new UserService();
@@ -60,7 +51,7 @@ public class UserPageService {
 
     public void refillUserBalance(){
         user.setBalance(user.getBalance() + ConstantsConfig.getIntProperty("balance.addMoneyToUserBalance"));
-        userService.save(user);
+        userService.update(user);
     }
 
 
@@ -86,7 +77,7 @@ public class UserPageService {
 
     public int sum() {
         sum = ConstantsConfig.getIntProperty("number.defaultNumber");
-        localDishes().forEach((d)-> sum+=d.getPrice());
+        dishes().forEach((d)-> sum+=d.getPrice());
         return sum;
     }
 
@@ -100,7 +91,7 @@ public class UserPageService {
 
     public void pay(int sum){
         user.setBalance(user.getBalance() - sum);
-        userService.save(user);
+        userService.update(user);
     }
 
     public void saveToStory() {

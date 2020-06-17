@@ -27,9 +27,17 @@
             </div>
             <div class="col-4 logout">
                 <div>
-                    <div class="name">${sessionScope.user.nameEng}</div>
-                    <button type="button" class="btn btn-outline-secondary" onclick="location.href='/web/logout'"><fmt:message key="button.logout"/></button>
-                    <div class="name"> <fmt:message key="header.balance"/> ${sessionScope.user.balance} <fmt:message key="header.currency"/> </div>
+                    <c:if test="${sessionScope.lang eq 'ua'}">
+                        <div class="name">${sessionScope.user.nameUkr}</div>
+                        <button type="button" class="btn btn-outline-secondary" onclick="location.href='/web/logout'"><fmt:message key="button.logout"/></button>
+                        <div class="name"> <fmt:message key="header.balance"/> ${sessionScope.user.balance} <fmt:message key="header.currency"/> </div>
+                    </c:if>
+                    <c:if test="${sessionScope.lang eq 'en'}">
+                        <div class="name">${sessionScope.user.nameEng}</div>
+                        <button type="button" class="btn btn-outline-secondary" onclick="location.href='/web/logout'"><fmt:message key="button.logout"/></button>
+                        <fmt:parseNumber var = "balanceEng" integerOnly = "true" type = "number" value = "${sessionScope.user.balance/8}" />
+                        <div class="name"> <fmt:message key="header.balance"/> ${balanceEng} <fmt:message key="header.currency"/> </div>
+                    </c:if>
                 </div>
             </div>
         </div>
@@ -82,7 +90,7 @@
                 </div>
                 <div class="col-2 info">
                     <div class="title">
-                            ${item.price}
+                            ${item.price}<fmt:message key="header.currency"/>
                     </div>
                 </div>
                 <div class="col-3">

@@ -37,6 +37,11 @@ public class JDBCDaoFactory extends DaoFactory {
         return new CartDaoImpl(getConnection());
     }
 
+    @Override
+    public TransactionDao createTransactionDao() {
+        return new TransactionDaoImpl(getConnection());
+    }
+
 
     private Connection getConnection(){
         try {

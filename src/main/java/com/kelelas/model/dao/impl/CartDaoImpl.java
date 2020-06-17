@@ -100,7 +100,11 @@ public class CartDaoImpl implements CartDao {
             ps.setInt(1, userId);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                DishDTO dish = extractLocaleDishFromResultSet(rs);
+                DishDTO dish;
+                if (locale.equals("ua"))
+                    dish = extractToUkrDishFromResultSet(rs);
+                else
+                    dish = extractToEngDishFromResultSet(rs);
                 makeUniqueDishDTO(dishes, dish);
 
             }

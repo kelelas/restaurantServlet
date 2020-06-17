@@ -27,8 +27,14 @@
             </div>
             <div class="col-4 logout">
                 <div>
-                    <div class="name">${sessionScope.name}</div>
-                    <button type="button" class="btn btn-outline-secondary" onclick="location.href='/web/logout'"><fmt:message key="button.logout"/></button>
+                    <c:if test="${sessionScope.lang eq 'ua'}">
+                        <div class="name">${sessionScope.user.nameUkr}</div>
+                        <button type="button" class="btn btn-outline-secondary" onclick="location.href='/web/logout'"><fmt:message key="button.logout"/></button>
+                    </c:if>
+                    <c:if test="${sessionScope.lang eq 'en'}">
+                        <div class="name">${sessionScope.user.nameEng}</div>
+                        <button type="button" class="btn btn-outline-secondary" onclick="location.href='/web/logout'"><fmt:message key="button.logout"/></button>
+                    </c:if>
                 </div>
             </div>
         </div>

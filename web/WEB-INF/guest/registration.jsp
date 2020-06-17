@@ -2,6 +2,7 @@
 <%@ page pageEncoding="UTF-8"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
 <fmt:setLocale value="${sessionScope.lang}" />
@@ -39,21 +40,18 @@
         </ul>
     </div>
 </nav>
-<%--<div th:if="${param.error != null}">--%>
-<%--    <div class="alert alert-danger" role="alert" th:text="#{message.user_exist}"></div>--%>
-<%--</div>--%>
-<%--<div th:if="${param.regex != null}">--%>
-<%--    <div class="alert alert-danger" role="alert" th:text="#{text.regex1}">--%>
-<%--    </div>--%>
-<%--    <div class="alert alert-danger" role="alert" th:text="#{text.regex2}">--%>
-<%--    </div>--%>
-<%--    <div class="alert alert-danger" role="alert" th:text="#{text.regex3}">--%>
-<%--    </div>--%>
-<%--    <div class="alert alert-danger" role="alert" th:text="#{text.regex4}">--%>
-<%--    </div>--%>
-<%--    <div class="alert alert-danger" role="alert" th:text="#{text.regex5}">--%>
-<%--    </div>--%>
-<%--</div>--%>
+<c:if test="${param.error != null}">
+    <div class="alert alert-danger" role="alert"><fmt:message key="message.user_exist"/></div>
+</c:if>
+
+<c:if test="${param.regex != null}">
+    <div class="alert alert-danger" role="alert"><fmt:message key="text.regex1"/></div>
+    <div class="alert alert-danger" role="alert"><fmt:message key="text.regex2"/></div>
+    <div class="alert alert-danger" role="alert"><fmt:message key="text.regex3"/></div>
+    <div class="alert alert-danger" role="alert"><fmt:message key="text.regex4"/></div>
+    <div class="alert alert-danger" role="alert"><fmt:message key="text.regex5"/></div>
+</c:if>
+
 <section class="login">
     <form action="reg" method="post">
         <label for="nameUkr"><fmt:message key="registration.name_ukr"/></label>
